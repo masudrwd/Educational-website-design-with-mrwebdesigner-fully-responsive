@@ -1,0 +1,114 @@
+
+@media (max-width: 960px) {
+
+    html{
+        font-size: 55.5%;
+    }
+
+    .container-{
+        padding: 7rem 2rem 3rem 2rem;
+    }
+
+    .bars{
+        display: block;
+    }
+
+    header .nav-bar{
+        position: absolute;
+        top: calc(-10000% + 2rem);
+        left: 0;
+        background-color: var(--white);
+        width: 100%;
+        height: auto;
+        padding: 3rem 0;
+        border-radius: 1rem;
+        z-index: 9999;
+        transition: all .2s linear;
+    }
+
+    header .nav-show{
+        top: calc(100% + 2rem);
+    }
+
+    header .nav-bar ul{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .nav-bar ul li a{
+        display: inline-block;
+        margin: 2rem 0;
+    }
+
+    .home .content p{
+        padding: 1rem 10rem;
+    }
+
+    .home .row{
+        width: 100%;
+    }
+
+    .home::before{
+        border-top: 280px solid var(--white);
+    }
+
+    .courses .row{
+        width: 100%;
+    }
+
+    .raview .row {
+        width: 100%;
+    }
+    
+
+
+
+}
+
+
+@media (max-width: 768px) {
+
+    html{
+        font-size: 50%;
+    }
+    
+    .title{
+        padding-bottom: 3rem;
+    }
+
+    .home .content p{
+        padding: 1rem 5rem;
+    }
+
+    .home::before{
+        display: none;
+    }
+
+    .home .row .card{
+        margin: 2rem auto;
+    }
+
+    .about .row{
+        flex-direction: column-reverse;
+    }
+
+
+    
+}
+
+
+@media (max-width: 576px) {
+
+    .container-{
+        padding: 7rem 1.3rem 3rem 1.3rem;
+    }
+
+    .home .content p{
+        padding: 1rem 2rem;
+    }
+
+    
+
+}

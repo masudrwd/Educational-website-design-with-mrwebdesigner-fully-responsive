@@ -1,0 +1,588 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+
+:root{
+    --pink: #FF046F;
+    --violet: #C63BFA;
+    --white: #fff;
+    --gBlack: #333;
+
+}
+
+html{
+    font-size: 62.5%;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    box-shadow: none !important;
+}
+
+*::selection{
+    background-color: var(--pink);
+    color: var(--white);
+}
+body{
+    background-color: var(--gBlack);
+}
+
+.container-{
+    padding: 7rem 3rem 2rem 3rem;
+}
+
+.heading{
+    font-size: 4rem;
+    color: var(--pink);
+    letter-spacing: .2rem;
+    font-weight: 500;
+}
+
+.title{
+    font-size: 2rem;
+    color: #aaa;
+    font-weight: 400;
+    letter-spacing: .1rem;
+}
+
+/* header section start */
+
+header{
+    background-color: var(--white);
+    width: 96%;
+    position: fixed;
+    top: 2rem; left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2rem;
+    z-index: 99999;
+    transition: all .3s linear;
+}
+
+header.header-nav{
+    top: 0;
+    left: 0;
+    transform: translateX(0%);
+    width: 100%;
+    border-radius: 0;
+    padding: 1rem 2rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1) !important;
+}
+
+header .logo{
+    font-size: 2.5rem;
+    color: var(--violet);
+    text-transform: uppercase;
+}
+
+header .logo:hover{
+    text-decoration: none;
+}
+
+header .logo i{
+    color: var(--pink);
+    padding: 0 .2rem;
+}
+
+header .nav-bar ul{
+    display: flex;
+    margin-bottom: 0 !important;
+    list-style-type: none;
+}
+
+header .nav-bar ul li a{
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: var(--pink);
+    transition: all .2s linear;
+}
+
+header .nav-bar ul li a:hover, header .nav-bar ul li .active{
+    text-decoration: none;
+    color: var(--violet);
+}
+
+.bars{
+    cursor: pointer;
+    display: none;
+}
+.bars span{
+    width: 25px;
+    height: 3px;
+    background-color: var(--pink);
+    display: table;
+    margin: 6px 0;
+    transition: .2s;
+}
+
+.bar-toggler span:nth-child(1){
+    transform: rotate(45deg);
+    margin-top: 8px;
+}
+
+.bar-toggler span:nth-child(2){
+    display: none;
+}
+
+.bar-toggler span:nth-child(3){
+    transform: rotate(-45deg);
+    margin-top: -8px;
+}
+
+/* header section end */
+
+/* home section start */
+
+.home{
+    min-height: auto;
+    width: 100%;
+    background: linear-gradient(rgba(200, 61, 250, 0.801), rgba(200, 61, 250, 0.801)), url('../photos/header-bg.jpg'), no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+.home::before{
+    content: '';
+    position: absolute;
+    bottom: -25%; left: 50%;
+    transform: translateX(-50%);
+    border-top: 314px solid var(--white);
+    width: 120%;
+    border-radius: 50%;
+}
+
+.home .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15rem;
+    padding-bottom: 8rem;
+    text-align: center;
+}
+
+.home .content h1{
+    font-size: 5rem;
+    color: var(--white);
+    padding: 0 1rem;
+    text-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.3) !important;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.home .content p{
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 25rem;
+}
+
+.home .content .btn{
+    background-color: var(--pink);
+    color: var(--white);
+    display: inline-block;
+    font-size: 2rem;
+    height: 4rem;
+    width: 20rem;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.3) !important;
+    transition: all .3s linear;
+    border-radius: 3rem;
+}
+
+.home .content .btn:hover{
+    letter-spacing: .2rem;
+}
+
+.home .row{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.home .row .card{
+    margin: 0 auto;
+    width: 20rem;
+    height: 20rem;
+    background-color: var(--white);
+    text-align: center;
+    border-radius: 1rem;
+    outline: none;
+    border: 0;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.3) !important;
+    cursor: pointer;
+    padding: 1rem 0;
+}
+
+.home .row .card i{
+    width: 6rem;
+    height: 6rem;
+    line-height: 6rem;
+    text-align: center;
+    background-color: var(--violet);
+    margin: 1rem auto;
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 2.5rem;
+    transition: .2s linear all;
+}
+
+.home .row .card:hover i{
+    background-color: var(--pink);
+}
+
+.home .row .card h3{
+    color: var(--pink);
+    font-size: 2rem;
+    transition: .2s;
+}
+
+.home .row .card:hover h3{
+    color: var(--violet);
+}
+
+.home .row .card p{
+    font-size: 1.3rem;
+    padding: .7rem 1rem;
+    color: #666;
+    text-transform: none;
+}
+
+/* home section end */
+
+/* about section start */
+
+.about{
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+.about .row{
+    justify-content: center;
+    align-items: center;
+}
+
+.about .row h3{
+    font-size: 3rem;
+    color: var(--pink);
+}
+
+.about .row p{
+    font-size: 1.7rem;
+    color:#999;
+    padding: 1rem 0;
+    text-transform: none;
+}
+
+.about .row .btn{
+    background-color: var(--violet);
+    color: var(--white);
+    display: inline-block;
+    font-size: 2rem;
+    height: 4rem;
+    width: 17rem;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.3) !important;
+    transition: all .3s linear;
+    border-radius: 3rem;
+}
+
+.about .row .btn:hover{
+    letter-spacing: .2rem;
+}
+
+/* about section end */
+
+/* teacher section start */
+
+.teacher{
+    width: 100%;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+.teacher .row{
+    flex-wrap: wrap;
+}
+
+.teacher .row .card{
+    width: 30rem;
+    margin: 1rem auto;
+    cursor: pointer;
+    padding: 2rem;
+    border: none;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.3) !important;
+}
+
+.teacher .row .card img{
+    height: 30rem;
+    width: 100%;
+    filter: grayscale();
+    transition: .3s;
+    object-fit: cover;
+    object-position: top;
+}
+
+.teacher .row .card:hover img{
+    filter: none;
+}
+
+.teacher .row .card h3{
+    color: var(--pink);
+    text-align: center;
+    padding: 1rem 0 0 0;
+    font-size: 2.1rem;
+}
+
+.teacher .row .card p{
+    color: #666;
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+.teacher .row .card .icons{
+    text-align: center;
+    display: inline-block;
+    padding-top: 1.5rem;
+}
+
+.teacher .row .card .icons a{
+    margin: 0 1rem;
+    font-size: 1.7rem;
+    transition: .3s;
+    color: var(--pink);
+}
+
+.teacher .row .card .icons a:hover{
+    color: var(--violet);
+    text-decoration: none;
+}
+
+/* teacher section end */
+
+/* course section starts */
+
+.courses{
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--white);
+}
+
+.courses .row{
+    width: 90%;
+    margin: auto;
+}
+
+.courses .row .card{
+    border: none;
+    width: 25rem;
+    height: 18rem;
+    margin: 5rem auto 5rem;
+    text-align: center;
+    box-shadow: .3rem .3rem 0 .1rem var(--violet),
+                .5rem .5rem .5rem rgba(0, 0, 0, 0.3) !important;
+    border-radius: 1rem;
+}
+
+.courses .row .card i{
+    height: 10rem;
+    width: 10rem;
+    background-color: var(--pink);
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 3.5rem;
+    margin-top: -4rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1rem solid #fff;
+    border-left: 1rem solid var(--pink);
+    border-right: 1rem solid var(--pink);
+    box-shadow: 0 0 0 1rem #fff inset !important;
+    line-height: 8rem;
+    text-align: center;
+}
+
+.courses .row .card h3{
+    font-size: 2rem;
+    color: var(--violet);
+}
+.courses .row .card p{
+    font-size: 1.5rem;
+    color: #999;
+    padding: 1rem 0;
+}
+
+/* course section starts */
+
+/* review section start */
+
+.raview{
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+.raview .row {
+    width: 90%;
+    margin: auto;
+}
+
+.raview .row .card{
+    margin: 4rem auto;
+    width: 28rem;
+    height: 22rem;
+    padding: 0 .5rem;
+    border: none;
+    box-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.3) !important;
+}
+
+.raview .row .card img{
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    object-position: top;
+    margin-top: -4rem;
+    border: .7rem solid var(--pink);
+    border-left: .7rem solid var(--violet);
+    border-bottom: .7rem solid var(--violet);
+    background-color: var(--pink);
+}
+
+.raview .row .card h3{
+    color: var(--pink);
+    padding-top: .7rem;
+    font-size: 2rem
+}
+.raview .row .card p{
+    color: #999;
+    padding-top: 1rem 0;
+    font-size: 1.5rem;
+    text-transform: none;
+}
+
+.raview .row .card .stars i{
+    font-size: 1.6rem;
+    color: var(--violet);
+    margin-top: 1rem;
+}
+
+/* review section end */
+
+/* contact section start */
+
+.contact{
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.contact .row{
+    justify-content: center;
+    align-items: center;
+}
+
+.contact form{
+    width: 100%;
+}
+.contact form input, .contact form textarea{
+    width: 100%;
+    height: 4rem;
+    padding: 0 1.7rem;
+    outline: none;
+    border: none;
+    margin: 1rem 0;
+    border-radius: 25rem;
+    font-size: 1.5rem;
+    background: #fff;
+    color: var(--pink);
+    transition: .3s linear;
+}
+
+.contact form input:focus, .contact form textarea:focus{
+    outline: .2rem solid var(--pink);
+}
+
+.contact form input[type="email"]{
+    text-transform: none !important;
+}
+
+.contact form input[type="email"]::placeholder{
+    text-transform: capitalize;
+}
+
+.contact form textarea{
+    height: 20rem;
+    border-radius: 1rem;
+    padding: 1rem 1.7rem;
+    text-transform: none !important;
+    resize: none;
+}
+
+.contact form textarea::placeholder{
+    text-transform: capitalize;
+}
+
+.contact form input[type="button"]{
+    background-color: var(--pink);
+    color: var(--white);
+    cursor: pointer;
+    width: 17rem;
+    font-size: 2rem;
+    outline: .3rem solid var(--pink);
+}
+
+.contact form input[type="button"]:hover{
+    background-color: transparent;
+}
+
+/* contact section end */
+
+/* footer section start */
+
+footer{
+    background-color: #fff;
+    overflow: hidden;
+    padding: 3rem 0 1rem 0;
+}
+
+footer .social-ico a i{
+    font-size: 2rem;
+    margin: 0 .5rem;
+    color: var(--violet);
+    width: 4rem;
+    height: 4rem;
+    border: .1rem solid var(--violet);
+    border-radius: 50%;
+    line-height: 3.8rem;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s linear;
+    display: inline-block;
+}
+
+footer .social-ico a i:hover{
+    background-color: var(--pink);
+    color: var(--white);
+    text-decoration: none;
+    border: .1rem solid var(--pink);
+}
+
+footer .credit{
+    font-size: 1.7rem;
+    color: #666;
+    width: 95%;
+    margin: auto;
+}
+
+footer .credit a{
+    color: var(--pink);
+}
+
+footer .credit i{
+    color: var(--violet);
+    padding-left: .4rem;
+}
